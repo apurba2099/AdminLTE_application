@@ -4,6 +4,7 @@ import "./login.css";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { API_LINK } from "../../utility/config";
+import Footer from "./../footer/Footer.jsx";
 export default function Login() {
   //Navigating forwar or backward
   const navigate = useNavigate();
@@ -106,6 +107,21 @@ export default function Login() {
           </p>
         </div>
       </div>
+      <Footer
+        style={{
+          marginTop: "2rem",
+          padding: "1rem",
+          borderTop: "1px solid #ccc",
+          fontWeight: 700,
+        }}
+      >
+        <p>
+          <a style={{ color: "blue" }} href="mailto:apurbadutta2099@gmail.com">
+            apurbadutta
+          </a>
+          ©{new Date().getFullYear()}. All rights reserved.
+        </p>
+      </Footer>
     </div>
   );
 }

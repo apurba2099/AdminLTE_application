@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "./register.css";
+import Footer from "../footer/Footer";
 import { API_LINK } from "../../utility/config";
 
 const Register = () => {
@@ -115,12 +116,26 @@ const Register = () => {
           <p>
             Already have an account?
             <Link to="/login" className="auth-link">
-              {" "}
               Login Here
             </Link>
           </p>
         </div>
       </div>
+      <Footer
+        style={{
+          marginTop: "2rem",
+          padding: "1rem",
+          borderTop: "1px solid #ccc",
+          fontWeight: 700,
+        }}
+      >
+        <p>
+          <a style={{ color: "blue" }} href="mailto:apurbadutta2099@gmail.com">
+            apurbadutta
+          </a>
+          ©{new Date().getFullYear()}. All rights reserved.
+        </p>
+      </Footer>
     </div>
   );
 };
