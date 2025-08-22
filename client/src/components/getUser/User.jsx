@@ -67,7 +67,7 @@ export default function User() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:8000/api/users/${userID}`, {
+      await axios.delete(`${API_LINK}/users/${userID}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

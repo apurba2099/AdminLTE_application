@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "./register.css";
+import { API_LINK } from "../../utility/config";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -33,10 +34,7 @@ const Register = () => {
     setError("");
 
     try {
-      const response = await axios.post(
-        "http://localhost:8000/api/auth/register",
-        user
-      );
+      const response = await axios.post(`${API_LINK}/auth/register`, user);
 
       // Store token in localStorage
       localStorage.setItem("token", response.data.token);

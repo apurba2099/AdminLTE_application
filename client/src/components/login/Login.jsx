@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { API_LINK } from "../../utility/config";
 export default function Login() {
   //Navigating forwar or backward
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ export default function Login() {
     setError("");
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/auth/login",
+        `${API_LINK}/auth/login`,
         user, //axios automatically stringifies JSON
         {
           headers: {
