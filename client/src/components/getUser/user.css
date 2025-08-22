@@ -1,0 +1,77 @@
+.userTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 3px 3px #363333;
+  padding: 12px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.heading {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #405cf5;
+  color: #fff;
+  border: 2px solid #000;
+  text-decoration: underline;
+}
+
+.para {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 8px;
+}
+.data {
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.action-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.action-btn {
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  padding: 6px;
+  border-radius: 8px;
+  transition: 0.1s ease-out all;
+}
+.action-btn:active {
+  transform: scale(0.9);
+}
+.btn {
+  padding: 6px 8px;
+  margin: 6px 2px;
+  background-color: #405cf5;
+  border: 2px solid #000;
+  box-shadow: 2px 2px #363333;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.1s ease-out all;
+}
+.btn:active {
+  transform: scale(0.9);
+}
