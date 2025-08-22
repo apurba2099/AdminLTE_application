@@ -3,6 +3,7 @@ import "./updateuser.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { API_LINK } from "../../utility/config";
 
 export default function UpdateUser() {
   const users = {
@@ -38,14 +39,11 @@ export default function UpdateUser() {
           return;
         }
 
-        const response = await axios.get(
-          `http://localhost:8000/api/users/${id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await axios.get(`${API_LINK}/users/${id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         setUser(response.data);
       } catch (error) {
@@ -82,16 +80,12 @@ export default function UpdateUser() {
         return;
       }
 
-      const response = await axios.put(
-        `http://localhost:8000/api/users/${id}`,
-        user,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.put(`${API_LINK}/users/${id}`, user, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
 
       // Success message
       toast.success(response.data.message, { position: "top-right" });
